@@ -17,7 +17,7 @@
                 android:icon="@drawable/ic_settings"
                 android:orderInCategory="2"
                 android:title="@string/settings"/>
-            <item android:id="@+id/menuLoggout"
+            <item android:id="@+id/menuLogout"
                 android:icon="@drawable/ic_logout"
                 android:orderInCategory="3"
                 android:title="@string/logout"/>

@@ -58,7 +58,7 @@ public class ProfileActivity extends AppCompatActivity {
             case R.id.menuSettings:
                 Util.showToast(this, "Item 2 Selected" );
                 return true;
-            case R.id.menuLoggout:
+            case R.id.menuLogout:
                 Util.showToast(this, "Logout" );
                 Util.changeActivity(ProfileActivity.this, VectorActivity.class, null);
                 return true;

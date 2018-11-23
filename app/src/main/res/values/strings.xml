@@ -26,6 +26,9 @@
     <string name="user">Usuario</string>
     <string name="settings">Configuración</string>
     <string name="logout">Cerrar sesión</string>
+    <string name="red">RED</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
 
     <string-array name="country_arrays">
         <item>México🇲🇽</item>
