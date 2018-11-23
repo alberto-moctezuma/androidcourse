@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".simpsonsActivity.ImageComponent">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewGallery"
+            android:layout_width="0dp"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/simpsons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="133dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/green_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="clicked"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewGallery">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saxophone"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:src="@drawable/saxophone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="133dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/green_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="clicked"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skateboarding"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:src="@drawable/skateboard_2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="133dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/green_btn_bg"
+            android:drawableEnd="@drawable/beer"
+            android:onClick="clicked"
+            android:text="@string/beer"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewGallery" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="133dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/green_btn_bg"
+            android:drawableEnd="@drawable/saving_pig"
+            android:onClick="clicked"
+            android:text="@string/pig"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+        <TextView
+            android:id="@+id/textViewImage"
+            android:layout_width="217dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewGallery" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

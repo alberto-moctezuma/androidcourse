@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Aplicacion Curso Android 1</string>
+    <string name="text_string">Este es una prueba</string>
+    <string name="button_message1">Pícale aquí!</string>
+    <string name="button_message2">Pícale acá!</string>
+    <string name="button_message3">Acá también!</string>
+
+    <string name="saxophone">Saxofón</string>
+    <string name="skateboarding">Patineta</string>
+    <string name="beer">Cerveza</string>
+    <string name="pig">Cerdo</string>
+
+    <string name="lisa">Has elegido a Lisa</string>
+    <string name="bart">Has elegido a Bart</string>
+    <string name="moe">Has elegido a Moe</string>
+    <string name="homer">Has elegido a Homero</string>
+    <string name="avenger_frase">Ponga aquí una frase</string>
+    <string name="avenger_esta_vivo">¿Está vivo?</string>
+    <string name="afirmativo">Sí</string>
+    <string name="negativo">No</string>
+    <string name="showInfo">Mostrar</string>
+    <string name="hasgema">¿Tiene gema?</string>
+    <string name="nombreAvenger">Avenger name:</string>
+    <string name="edit">End</string>
+    <string name="loggin">Loggin</string>
+    <string name="user">Usuario</string>
+    <string name="settings">Configuración</string>
+    <string name="logout">Cerrar sesión</string>
+
+    <string-array name="country_arrays">
+        <item>México🇲🇽</item>
+        <item>Malaysia 🇲🇾</item>
+        <item>United States 🇺🇸</item>
+        <item>Indonesia 🇮🇩</item>
+        <item>France 🇫🇷</item>
+        <item>Italy 🇮🇹</item>
+        <item>Singapore 🇸🇬</item>
+        <item>New Zealand 🇳🇿</item>
+    </string-array>
+
+</resources>
