@@ -3,13 +3,16 @@ package udg.mxc.aplication1.goodviewpager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import udg.mxc.aplication1.R;
 import udg.mxc.aplication1.goodviewpager.fragments.FragmentOne;
 import udg.mxc.aplication1.goodviewpager.fragments.FragmentThree;
 import udg.mxc.aplication1.goodviewpager.fragments.FragmentTwo;
+import udg.mxc.aplication1.util.KeysConstants;
 import udg.mxc.aplication1.util.Util;
 
 public class GoodViewPagerActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
@@ -51,5 +54,17 @@ public class GoodViewPagerActivity extends AppCompatActivity implements ViewPage
     @Override
     public void onPageScrollStateChanged(int i) {
         Util.showLog( TAG, "On page scroll: "+i );
+    }
+
+    @OnClick( R.id.buttonToFragmentOne ) public void toFragmentOne( View view ){
+        viewPager.setCurrentItem( KeysConstants.FRAGMENT_ONE_VIEW_POSITION );
+    }
+
+    @OnClick( R.id.buttonToFragmentTwo ) public void toFragmentTwo( View view ){
+        viewPager.setCurrentItem( KeysConstants.FRAGMENT_TWO_VIEW_POSITION );
+    }
+
+    @OnClick( R.id.buttonToFragmentThree ) public void toFragmentThree( View view ){
+        viewPager.setCurrentItem( KeysConstants.FRAGMENT_THREE_VIEW_POSITION );
     }
 }
