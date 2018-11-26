@@ -51,7 +51,7 @@ public class VectorActivity extends AppCompatActivity {
             if( areValidInput() ){
                 HashMap<String, String> parameters = new HashMap<>();
                 parameters.put( KeysConstants.PROFILE, mTextEmail.getText().toString() );
-                Util.changeActivity(VectorActivity.this, ProfileActivity.class, parameters);
+                Util.changeActivity(VectorActivity.this, ProfileActivity.class, parameters, true);
             }
         }
 

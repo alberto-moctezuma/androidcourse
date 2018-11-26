@@ -29,6 +29,12 @@
     <string name="red">RED</string>
     <string name="blue">BLUE</string>
     <string name="green">GREEN</string>
+    <string name="name">Nombre</string>
+    <string name="address">Dirección</string>
+    <string name="end">Finalizar</string>
+    <string name="empy_fields">Ingrese todo los campos.</string>
+    <string name="empty_name">Nombre en blanco.</string>
+    <string name="empty_address">Dirección vacía.</string>
 
     <string-array name="country_arrays">
         <item>México🇲🇽</item>

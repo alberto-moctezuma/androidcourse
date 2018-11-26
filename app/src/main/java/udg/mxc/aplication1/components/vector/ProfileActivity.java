@@ -60,7 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
                 return true;
             case R.id.menuLogout:
                 Util.showToast(this, "Logout" );
-                Util.changeActivity(ProfileActivity.this, VectorActivity.class, null);
+                Util.changeActivity(ProfileActivity.this, VectorActivity.class, null, true);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

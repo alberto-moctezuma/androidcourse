@@ -16,6 +16,8 @@ import java.util.regex.Pattern;
 
 public class Util {
 
+    private static String TAG = Util.class.getSimpleName();
+
     private static ScrollView parentLayout;
 
     public static void showLog( String TAG, String message ){
@@ -39,7 +41,7 @@ public class Util {
         Toast.makeText( context, message, Toast.LENGTH_LONG ).show();
     }
 
-    public static void changeActivity(Activity activity, Class aClass, HashMap<String, String> parameters){
+    public static void changeActivity(Activity activity, Class aClass, HashMap<String, String> parameters, boolean finish){
         Intent intent = new Intent( activity, aClass );
         if( parameters != null ) {
             for (Map.Entry<String, String> entry : parameters.entrySet()) {
@@ -47,7 +49,10 @@ public class Util {
             }
         }
         activity.startActivity(intent);
-        activity.finish();
+        if( finish ) {
+            Util.showLog(TAG,"Finished");
+            activity.finish();
+        }
     }
 
     public static int getRandomNumber(){

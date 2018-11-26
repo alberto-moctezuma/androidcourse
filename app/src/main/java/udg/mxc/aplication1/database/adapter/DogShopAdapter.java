@@ -15,17 +15,18 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.realm.RealmList;
 import udg.mxc.aplication1.R;
 import udg.mxc.aplication1.database.model.DogShop;
 
 public class DogShopAdapter extends RecyclerView.Adapter<DogShopAdapter.ViewHolderAdapter> {
 
-    List<DogShop> dogShops;
+    RealmList<DogShop> dogShops;
     Context context;
     DogShopClick dogShopClick;
     DogShopLongClick dogShopLongClick;
 
-    public DogShopAdapter(List<DogShop> dogShops, Context context, DogShopClick dogShopClick, DogShopLongClick dogShopLongClick) {
+    public DogShopAdapter(RealmList<DogShop> dogShops, Context context, DogShopClick dogShopClick, DogShopLongClick dogShopLongClick) {
         this.dogShops = dogShops;
         this.context = context;
         this.dogShopClick = dogShopClick;
@@ -88,7 +89,7 @@ public class DogShopAdapter extends RecyclerView.Adapter<DogShopAdapter.ViewHold
                     .into(mImgShop);
 
             mTvDogShopName.setText("Nombre: "+dogShop.name);
-            mTvDogShopName.setText("Dirección: "+dogShop.address);
+            mTvDogShopAddress.setText("Dirección: "+dogShop.address);
 
         }
     }
