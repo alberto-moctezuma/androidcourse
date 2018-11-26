@@ -35,6 +35,13 @@
     <string name="empy_fields">Ingrese todo los campos.</string>
     <string name="empty_name">Nombre en blanco.</string>
     <string name="empty_address">Dirección vacía.</string>
+    <string name="message">Mensaje</string>
+    <string name="send">Enviar</string>
+    <string name="empty_input_message">Mensaje de error</string>
+    <string name="insert_a_message_to_send">Este es una notificación de prueba</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
 
     <string-array name="country_arrays">
         <item>México🇲🇽</item>

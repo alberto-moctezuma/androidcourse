@@ -12,4 +12,5 @@ public class KeysConstants {
     public static int FRAGMENT_TWO_VIEW_POSITION = 1;
     public static int FRAGMENT_THREE_VIEW_POSITION = 2;
 
+    public static String message = "message";
 }
