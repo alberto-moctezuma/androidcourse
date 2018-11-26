@@ -28,19 +28,20 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".components.vector.VectorActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".components.vector.ProfileActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".viewpager.ViewPagerActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".goodviewpager.GoodViewPagerActivity"
             android:screenOrientation="portrait">
-
         </activity>
-        <activity android:name=".goodviewpager.GoodViewPagerActivity" android:screenOrientation="portrait">
+        <activity android:name=".database.RealmRecyclerSampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

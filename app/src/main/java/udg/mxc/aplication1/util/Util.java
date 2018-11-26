@@ -49,4 +49,24 @@ public class Util {
         activity.startActivity(intent);
         activity.finish();
     }
+
+    public static int getRandomNumber(){
+        return  (int)(Math.random()*((3-1)+1))+1;
+    }
+
+    public static int getRandomID(){
+        return  (int)(Math.random()*((30000-1)+1))+1;
+    }
+
+    public static String setRandomImage(){
+        switch (Util.getRandomNumber()){
+            case 1:
+                return "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Callie_the_golden_retriever_puppy.jpg/300px-Callie_the_golden_retriever_puppy.jpg";
+            case 2:
+                return "https://www.tiendanimal.es/articulos/wp-content/uploads/2010/06/la-forma-de-ser-de-tu-perro.jpg";
+            case 3:
+                return "https://barkpost.com/wp-content/uploads/2014/11/lavadogshawaii.jpg";
+        }
+        return "";
+    }
 }
