@@ -43,12 +43,18 @@
         <activity android:name=".database.EditShopActivity" />
         <activity android:name=".notificationssample.NotificationsActivity" />
         <activity android:name=".notificationssample.FirstActivity" />
-        <activity android:name=".webview.WebViewActivity">
-
+        <activity android:name=".webview.WebViewActivity" />
+        <activity
+            android:name=".mediaplayer.MusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediaplayer.VideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".animations.AnimationsActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".mediaplayer.MusicActivity" android:screenOrientation="portrait">
-        </activity>>
-        <activity android:name=".mediaplayer.VideoActivity" android:screenOrientation="portrait">
+        <activity android:name=".animations.LottieSampleActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
