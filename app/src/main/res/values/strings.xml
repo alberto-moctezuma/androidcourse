@@ -62,5 +62,7 @@
         <item>New Zealand 🇳🇿</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="camera">Cámara</string>
+    <string name="media">Media</string>
 
 </resources>
