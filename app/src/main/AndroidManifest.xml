@@ -16,6 +16,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <uses-library
             android:name="org.apache.http.legacy"
@@ -38,7 +39,12 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".components.vector.VectorActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".components.vector.ProfileActivity"
             android:screenOrientation="portrait" />
@@ -97,10 +103,6 @@
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".ws.WebServiceSamplesActivity" android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

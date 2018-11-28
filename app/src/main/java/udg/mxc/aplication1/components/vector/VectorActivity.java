@@ -1,7 +1,6 @@
 package udg.mxc.aplication1.components.vector;
 
 
-import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,9 +13,15 @@ import java.util.HashMap;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import udg.mxc.aplication1.R;
 import udg.mxc.aplication1.util.KeysConstants;
 import udg.mxc.aplication1.util.Util;
+import udg.mxc.aplication1.ws.oauth.Client;
+import udg.mxc.aplication1.ws.oauth.ServiceGenerator;
+import udg.mxc.aplication1.ws.wsmodels.LoginOauthResponse;
 
 public class VectorActivity extends AppCompatActivity {
 
@@ -42,6 +47,23 @@ public class VectorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vector);
         ButterKnife.bind( this );
 
+        /*
+        udg.mxc.aplication1.ws.oauth.Client client2 = udg.mxc.aplication1.ws.oauth.ServiceGenerator.createService(udg.mxc.aplication1.ws.oauth.Client.class);
+        client2.login("hola@uble.mx","sachubab13")
+                .enqueue(new Callback<LoginOauthResponse>() {
+                    @Override
+                    public void onResponse(Call<LoginOauthResponse> call, Response<LoginOauthResponse> response) {
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginOauthResponse> call, Throwable t) {
+
+                    }
+                });
+        */
+
+
     }
 
     @OnClick( R.id.buttonLoggin ) public void loggin( View view ) {
@@ -49,9 +71,27 @@ public class VectorActivity extends AppCompatActivity {
             Util.showSnackBar(mScrollViewVector,"No ha ingresado ningún campo");
         }else{
             if( areValidInput() ){
-                HashMap<String, String> parameters = new HashMap<>();
-                parameters.put( KeysConstants.PROFILE, mTextEmail.getText().toString() );
-                Util.changeActivity(VectorActivity.this, ProfileActivity.class, parameters, true);
+
+                Client client = ServiceGenerator.createService(Client.class);
+                client.login(mTextEmail.getText().toString(), mTextPassword.getText().toString())
+                        .enqueue(new Callback<LoginOauthResponse>() {
+                            @Override
+                            public void onResponse(Call<LoginOauthResponse> call, Response<LoginOauthResponse> response) {
+                                LoginOauthResponse loginOauthResponse = response.body();
+                                if( loginOauthResponse.getSuccess() == 1 ){
+                                    HashMap<String, String> parameters = new HashMap<>();
+                                    parameters.put( KeysConstants.PROFILE, mTextEmail.getText().toString() );
+                                    Util.changeActivity(VectorActivity.this, ProfileActivity.class, parameters, true);
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<LoginOauthResponse> call, Throwable t) {
+
+                            }
+                        });
+
+
             }
         }
 

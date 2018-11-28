@@ -1,4 +1,4 @@
-package udg.mxc.aplication1.ws;
+package udg.mxc.aplication1.ws.oauth;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
-    private static final String BASE_URL = "https://swapi.co/api/";
+    private static final String BASE_URL = "http://www.uble.mx/buckner/ws/";
 
     private static HttpLoggingInterceptor logging = new HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY);

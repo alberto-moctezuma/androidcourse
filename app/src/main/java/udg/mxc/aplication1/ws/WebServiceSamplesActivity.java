@@ -1,24 +1,20 @@
 package udg.mxc.aplication1.ws;
 
 import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.io.IOException;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import udg.mxc.aplication1.R;
-import udg.mxc.aplication1.util.Util;
-import udg.mxc.aplication1.ws.wsmodels.ResponseTest;
+import udg.mxc.aplication1.ws.starwars.Client;
+import udg.mxc.aplication1.ws.starwars.ServiceGenerator;
 import udg.mxc.aplication1.ws.wsmodels.StarWarsCharacterResponse;
 
 public class WebServiceSamplesActivity extends AppCompatActivity {
@@ -34,6 +30,7 @@ public class WebServiceSamplesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_service_samples);
         ButterKnife.bind(this);
+
     }
 
     @OnClick(R.id.buttonPokemon) public void getCharacter(View view){
