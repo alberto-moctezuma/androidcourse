@@ -18,6 +18,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import udg.mxc.aplication1.R;
 import udg.mxc.aplication1.util.Util;
+import udg.mxc.aplication1.ws.wsmodels.ResponseTest;
+import udg.mxc.aplication1.ws.wsmodels.StarWarsCharacterResponse;
 
 public class WebServiceSamplesActivity extends AppCompatActivity {
 
@@ -39,21 +41,16 @@ public class WebServiceSamplesActivity extends AppCompatActivity {
         if( !input.isEmpty() ){
             Client client = ServiceGenerator.createService(Client.class);
             client.getCharacter(input)
-                    .enqueue(new Callback<ResponseBody>() {
+                    .enqueue(new Callback<StarWarsCharacterResponse>() {
                         @Override
-                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                            try{
-                                Util.showLog("JSON", response.body().string());
-                                mTextViewPokemon.setText("Respuesta: "+response.body().string());
-                            }catch (IOException e){
-                                e.printStackTrace();
-                            }
+                        public void onResponse(Call<StarWarsCharacterResponse> call, Response<StarWarsCharacterResponse> response) {
+                            StarWarsCharacterResponse starWarsCharacterResponse = response.body();
+                            mTextViewPokemon.setText( starWarsCharacterResponse.name );
                         }
 
                         @Override
-                        public void onFailure(Call<ResponseBody> call, Throwable t) {
-                            mTextViewPokemon.setText("ERROR!!!!!!!!");
-                            t.printStackTrace();
+                        public void onFailure(Call<StarWarsCharacterResponse> call, Throwable t) {
+
                         }
                     });
         }
